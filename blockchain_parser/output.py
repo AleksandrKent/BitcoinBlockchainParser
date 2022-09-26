@@ -9,6 +9,7 @@
 # modified, propagated, or distributed except according to the terms contained
 # in the LICENSE file.
 
+from typing import List
 from .utils import decode_varint, decode_uint64
 from .script import Script
 from .address import Address
@@ -51,7 +52,7 @@ class Output(object):
         return self._script
 
     @property
-    def addresses(self):
+    def addresses(self) -> List[Address]:
         """Returns a list containing all the addresses mentioned
         in the output's script
         """

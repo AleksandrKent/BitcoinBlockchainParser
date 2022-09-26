@@ -10,6 +10,7 @@
 # in the LICENSE file.
 
 from math import ceil
+from typing import List, Optional
 
 from .utils import decode_varint, decode_uint32, double_sha256, format_hash
 from .input import Input
@@ -26,7 +27,7 @@ class Transaction(object):
     def __init__(self, raw_hex):
         self._hash = None
         self._txid = None
-        self.inputs = None
+        self.inputs: Optional[List[Input]] = None
         self.outputs = None
         self._version = None
         self._locktime = None

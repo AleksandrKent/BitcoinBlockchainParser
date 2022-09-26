@@ -9,6 +9,7 @@
 # modified, propagated, or distributed except according to the terms contained
 # in the LICENSE file.
 
+from typing import List
 from .transaction import Transaction
 from .block_header import BlockHeader
 from .utils import format_hash, decode_varint, double_sha256
@@ -83,7 +84,7 @@ class Block(object):
         return self._n_transactions
 
     @property
-    def transactions(self):
+    def transactions(self) -> List[Transaction]:
         """Returns a list of the block's transactions represented
         as Transaction objects"""
         if self._transactions is None:
