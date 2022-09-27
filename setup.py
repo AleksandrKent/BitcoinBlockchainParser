@@ -20,7 +20,7 @@ setup(
     ],
     install_requires=[
         'python-bitcoinlib==0.11.0',
-        'plyvel==1.2.0;platform_system=="Linux"',
+        'plyvel==1.4.0;platform_system=="Linux"',
         'plyvel-wheels==1.3.0;platform_system=="Windows"'
     ]
 )
